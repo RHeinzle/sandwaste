@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks Project", "Tanks Project.csproj", "{8FD230CE-D3E0-919F-533B-137BE2153AF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks Project.Editor", "Tanks Project.Editor.csproj", "{DCB8CB85-3970-7EE5-617A-C75A1409F2CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FD230CE-D3E0-919F-533B-137BE2153AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD230CE-D3E0-919F-533B-137BE2153AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD230CE-D3E0-919F-533B-137BE2153AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD230CE-D3E0-919F-533B-137BE2153AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB8CB85-3970-7EE5-617A-C75A1409F2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB8CB85-3970-7EE5-617A-C75A1409F2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB8CB85-3970-7EE5-617A-C75A1409F2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB8CB85-3970-7EE5-617A-C75A1409F2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
