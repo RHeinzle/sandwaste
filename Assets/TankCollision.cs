@@ -2,25 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CuboCollision : MonoBehaviour {
+public class TankCollision : MonoBehaviour {
 
     GameObject obj = null;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
 
-              
+       
+
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -39,6 +40,4 @@ public class CuboCollision : MonoBehaviour {
             }
         }
     }
-
-
 }

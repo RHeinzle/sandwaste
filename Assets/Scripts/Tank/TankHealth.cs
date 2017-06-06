@@ -104,7 +104,7 @@ public class TankHealth : MonoBehaviour
             {
                 print("antigo= " + oldTimer + " novo= " + novo);
                 oldTimer = novo;
-                //ExplosionTank(1);
+                ExplosionTank(1);
                
             }
 
