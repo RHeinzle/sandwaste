@@ -5,6 +5,7 @@ using UnityEngine;
 public class CuboCollision : MonoBehaviour {
 
     GameObject obj = null;
+    public int heightY = 10; 
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,15 @@ public class CuboCollision : MonoBehaviour {
 		
 
 	}
+
+
+    // Fazer Y fixo ( não funciona ainda )
+    private void LateUpdate()
+    {
+
+        gameObject.transform.position.Set(
+            gameObject.transform.position.x, heightY, gameObject.transform.position.z);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

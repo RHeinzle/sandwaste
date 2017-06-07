@@ -35,6 +35,7 @@ public class CaptureTrash : MonoBehaviour {
             {
                 obj = collision.gameObject;
                 obj.SetActive(false);
+                obj = null;
             }
         }
     }
