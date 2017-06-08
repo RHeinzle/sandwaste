@@ -5,6 +5,7 @@ using UnityEngine;
 public class CaptureTrash : MonoBehaviour {
 
     GameObject obj = null;
+    public GameObject player;
 
     // Use this for initialization
     void Start()
@@ -36,7 +37,12 @@ public class CaptureTrash : MonoBehaviour {
                 obj = collision.gameObject;
                 obj.SetActive(false);
                 obj = null;
+
+                player.GetComponent<Contador>().increment();
+                
             }
         }
     }
+
+   
 }

@@ -5,26 +5,33 @@ using UnityEngine;
 public class CuboCollision : MonoBehaviour {
 
     GameObject obj = null;
-    public int heightY = 10; 
+    public int heightY;
+  
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-
-	}
+        
+        
+    }
 
 
     // Fazer Y fixo ( não funciona ainda )
     private void LateUpdate()
     {
 
-        gameObject.transform.position.Set(
-            gameObject.transform.position.x, heightY, gameObject.transform.position.z);
+        Vector3 novaPosicao = new Vector3(
+            gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        novaPosicao.y = heightY;
+        
+        gameObject.transform.position = novaPosicao;
+
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
