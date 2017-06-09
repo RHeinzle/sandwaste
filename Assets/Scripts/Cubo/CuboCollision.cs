@@ -23,14 +23,14 @@ public class CuboCollision : MonoBehaviour {
     // Fazer Y fixo ( não funciona ainda )
     private void LateUpdate()
     {
-
-        Vector3 novaPosicao = new Vector3(
+        /*
+       Vector3 novaPosicao = new Vector3(
             gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-        novaPosicao.y = heightY;
+                 novaPosicao.y = heightY;
         
-        gameObject.transform.position = novaPosicao;
+           gameObject.transform.position = novaPosicao;
 
-
+        */
 
     }
 

@@ -14,7 +14,7 @@ public class ImageTargetController : MonoBehaviour {
     void Update()
     {
        
-       // gameObject.transform.position =  new Vector3(X, heightY, Z);
+      
     }
 
 

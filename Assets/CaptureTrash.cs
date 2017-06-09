@@ -6,6 +6,7 @@ public class CaptureTrash : MonoBehaviour {
 
     GameObject obj = null;
     public GameObject player;
+    public string cor;
 
     // Use this for initialization
     void Start()
@@ -28,19 +29,29 @@ public class CaptureTrash : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        bool b = collision.gameObject.CompareTag("CubeTeste");
-        if (b)
+        string tag = collision.gameObject.tag.ToLower();
+        
+
+        if (tag.StartsWith("lixo"))
         {
             Debug.Log(gameObject.name+ " teve colisão com:" + collision.gameObject.tag);
-            if (obj == null)
+
+            if (tag.EndsWith(cor))
             {
                 obj = collision.gameObject;
                 obj.SetActive(false);
+                collision.transform.SetParent(null);
                 obj = null;
-
                 player.GetComponent<Contador>().increment();
-                
+                player.GetComponent<TankCollision>().setObj(null);
             }
+            else
+            {
+                collision.transform.SetParent(null);
+                collision.transform.position =  player.GetComponent<TankCollision>().getObjPosition();
+                player.GetComponent<TankCollision>().setObj(null);
+            }
+                        
         }
     }
 

@@ -6,6 +6,18 @@ public class TankCollision : MonoBehaviour {
 
     GameObject obj = null;
 
+    Vector3 objposition;
+
+    public void setObj(GameObject obj)
+    {
+        this.obj = obj;
+    }
+
+    public Vector3 getObjPosition()
+    {
+        return this.objposition;
+    }
+
     // Use this for initialization
     void Start () {
 		
@@ -27,16 +39,17 @@ public class TankCollision : MonoBehaviour {
     private void OnTriggerEnter(Collider collision)
     {
         bool b = collision.gameObject.CompareTag("CubeTeste");
-
-
-        if (b)
+        
+        if (collision.gameObject.tag.StartsWith("Lixo"))
         {
             Debug.Log("teve colisão com:" + collision.gameObject.tag);
-            collision.gameObject.transform.SetParent(transform);
+            
             if (obj == null)
             {
                 obj = collision.gameObject;
+                this.objposition = obj.gameObject.transform.position;
                 obj.transform.SetParent(transform);
+                
             }
         }
     }
