@@ -8,24 +8,6 @@ public class CaptureTrash : MonoBehaviour {
     public GameObject player;
     public string cor;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-
-    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -43,13 +25,15 @@ public class CaptureTrash : MonoBehaviour {
                 collision.transform.SetParent(null);
                 obj = null;
                 player.GetComponent<Contador>().increment();
-                player.GetComponent<TankCollision>().setObj(null);
+                //player.GetComponent<TankCollision>().setObj(null);
+                player.GetComponent<CuboCollision>().setObj(null);
             }
             else
             {
                 collision.transform.SetParent(null);
-                collision.transform.position =  player.GetComponent<TankCollision>().getObjPosition();
-                player.GetComponent<TankCollision>().setObj(null);
+                collision.transform.position =  player.GetComponent<CuboCollision>().getObjPosition();
+                //player.GetComponent<TankCollision>().setObj(null);
+                player.GetComponent<CuboCollision>().setObj(null);
             }
                         
         }

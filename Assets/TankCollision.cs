@@ -18,24 +18,7 @@ public class TankCollision : MonoBehaviour {
         return this.objposition;
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnCollisionEnter(Collision collision)
-    {
-
-       
-
-
-    }
-
+    
     private void OnTriggerEnter(Collider collision)
     {
         bool b = collision.gameObject.CompareTag("CubeTeste");
