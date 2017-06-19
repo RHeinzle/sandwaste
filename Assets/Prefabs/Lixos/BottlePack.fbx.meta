@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 54467a842b9f87e42a0717b3729e2776
+timeCreated: 1497830077
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bottle1
+    100002: Bottle1_Trash
+    100004: Bottle2
+    100006: Bottle2_Trash
+    100008: Bottle3
+    100010: Bottle3_Trash
+    100012: //RootNode
+    100014: Camera
+    100016: Can1
+    100018: Can1_Trash
+    100020: Lamp
+    100022: Yukery
+    100024: Yukery_Trash
+    400000: Bottle1
+    400002: Bottle1_Trash
+    400004: Bottle2
+    400006: Bottle2_Trash
+    400008: Bottle3
+    400010: Bottle3_Trash
+    400012: //RootNode
+    400014: Camera
+    400016: Can1
+    400018: Can1_Trash
+    400020: Lamp
+    400022: Yukery
+    400024: Yukery_Trash
+    2300000: Bottle1
+    2300002: Bottle1_Trash
+    2300004: Bottle2
+    2300006: Bottle2_Trash
+    2300008: Bottle3
+    2300010: Bottle3_Trash
+    2300012: Can1
+    2300014: Can1_Trash
+    2300016: Yukery
+    2300018: Yukery_Trash
+    3300000: Bottle1
+    3300002: Bottle1_Trash
+    3300004: Bottle2
+    3300006: Bottle2_Trash
+    3300008: Bottle3
+    3300010: Bottle3_Trash
+    3300012: Can1
+    3300014: Can1_Trash
+    3300016: Yukery
+    3300018: Yukery_Trash
+    4300000: Can1_Trash
+    4300002: Bottle3_Trash
+    4300004: Bottle3
+    4300006: Can1
+    4300008: Yukery_Trash
+    4300010: Yukery
+    4300012: Bottle2_Trash
+    4300014: Bottle1_Trash
+    4300016: Bottle2
+    4300018: Bottle1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
