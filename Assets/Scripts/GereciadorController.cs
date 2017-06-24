@@ -6,6 +6,8 @@ public class GereciadorController : MonoBehaviour {
 
     public GameObject[] areasLixo;
     public GameObject[] lixos;
+    public GameObject[] area_desovas;
+    public int qtd_lixos = 5;
     public float offsetX = -60;
     public float offsetZ = 60;
     private float offsetY = 2f;
@@ -56,60 +58,30 @@ public class GereciadorController : MonoBehaviour {
     private void adicionaLixos()
     {
         Debug.Log("Entrou Lixos aleatorios");
-
-        if (lixos == null)
+        ArrayList lixos2 = new ArrayList(lixos);
+        if (lixos2 == null)
         {
             return;
         }
 
-        Vector3 anterior = new Vector3(0f, 0f, 0f);
+        GameObject desova = area_desovas[Random.Range(0, area_desovas.Length)];
 
-        foreach (GameObject gameObject in lixos)
+        
+        for(int i =0; i< qtd_lixos ; i++)
         {
-            Vector3 atual = new Vector3(Random.Range(offsetX, offsetZ), offsetY, Random.Range(offsetX, offsetZ));
+            GameObject lixo = (GameObject) lixos2[Random.Range(0, lixos2.Count)];
+            lixos2.Remove(lixo);
 
-            foreach (Vector3 v in vectorsAux)
+            for( int j=0; j < desova.transform.childCount ; j++)
             {
-                while (atual.x == v.x || atual.z == v.z)
-                {
-                    atual = new Vector3(Random.Range(offsetX, offsetZ), offsetY, Random.Range(offsetX, offsetZ));
-                }
-            }
-
-
-            foreach (GameObject g in lixos)
-            {
-                while (atual.x == g.transform.position.x || atual.z == g.transform.position.z)
-                {
-                    atual = new Vector3(Random.Range(offsetX, offsetZ), offsetY, Random.Range(offsetX, offsetZ));
-                }
+                GameObject pos_desova =  desova.transform.GetChild(i).gameObject;
+                lixo.transform.position = pos_desova.transform.position;
+                lixo.SetActive(true);
             }
 
             
-            anterior = atual;
-            gameObject.transform.position = atual;
-            gameObject.SetActive(true);
-
         }
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void GerarLixosAleatorios()
-    {
-        foreach( GameObject g in lixos)
-        {
-            g.SetActive(false);
-           
-        }
-        adicionaLixos();
-    }
+        
 }
