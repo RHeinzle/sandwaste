@@ -7,10 +7,12 @@ public class GereciadorController : MonoBehaviour {
     public GameObject[] areasLixo;
     public GameObject[] lixos;
     public GameObject[] area_desovas;
+    public float altura_lixos = 5;
     public int qtd_lixos = 5;
     public float offsetX = -60;
     public float offsetZ = 60;
     private float offsetY = 2f;
+    
 
 
     Vector3 pos1 = new Vector3(-90f, 1f, 100f);
@@ -75,6 +77,9 @@ public class GereciadorController : MonoBehaviour {
             for( int j=0; j < desova.transform.childCount ; j++)
             {
                 GameObject pos_desova =  desova.transform.GetChild(i).gameObject;
+                Vector3 transformAux = pos_desova.transform.position;
+                transformAux.y = altura_lixos;
+                pos_desova.transform.position = transformAux;
                 lixo.transform.position = pos_desova.transform.position;
                 lixo.SetActive(true);
             }
