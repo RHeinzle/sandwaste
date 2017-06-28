@@ -28,28 +28,22 @@ public class CuboCollision : MonoBehaviour {
         return isrunnigTime;
     }
 
-   /* private void OnTriggerEnter(Collider collision)
-    {
-       // bool b = collision.gameObject.CompareTag("CubeTeste");
+     private void OnTriggerEnter(Collider collision)
+     {
+        if (collision.gameObject.tag.Equals("INICIO"))
+         {
+             Debug.Log(gameObject.name + " teve colisão com:" + collision.gameObject.tag);
+             GetComponent<Contador>().setInicio(true);
 
-        if (collision.gameObject.tag.StartsWith("Lixo"))
-        {
-            Debug.Log(gameObject.name + " teve colisão com:" + collision.gameObject.tag);
+         }
 
-            if (obj == null)
-            {
-                obj = collision.gameObject;
-                this.objposition = obj.gameObject.transform.position;
-                obj.transform.SetParent(transform);
-
-            }
-        }
-    }*/
+     }
 
 
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag.StartsWith("Lixo"))
+        
+            if (collision.gameObject.tag.StartsWith("Lixo"))
         {
             Debug.Log(gameObject.name + " teve colisão com:" + collision.gameObject.tag);
 

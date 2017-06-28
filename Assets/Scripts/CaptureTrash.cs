@@ -7,6 +7,7 @@ public class CaptureTrash : MonoBehaviour {
     GameObject obj = null;
     public GameObject player;
     public string cor;
+    public GameObject particula;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -23,10 +24,13 @@ public class CaptureTrash : MonoBehaviour {
             {
                 player.GetComponent<Contador>().increment();
                 obj.transform.SetParent(null);
+                Instantiate(particula, obj.transform.position, Quaternion.identity);
                 obj.SetActive(false);
+                Destroy(obj);
                 obj = null;
                 //player.GetComponent<TankCollision>().setObj(null);
                 player.GetComponent<CuboCollision>().setObj(null);
+
 
             }
             else

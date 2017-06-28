@@ -24,7 +24,7 @@ public class MovimentoMao : MonoBehaviour
 
     private void OnEnable()
     {
-        m_Rigidbody.isKinematic = false;
+        //m_Rigidbody.isKinematic = false;
         m_MovementInputValue = 0f;
         m_TurnInputValue = 0f;
     }
@@ -32,42 +32,33 @@ public class MovimentoMao : MonoBehaviour
 
     private void OnDisable()
     {
-        m_Rigidbody.isKinematic = true;
+        //m_Rigidbody.isKinematic = true;
     }
 
 
     private void Start()
     {
-        m_MovementAxisName = "Vertical";
-        m_TurnAxisName = "Horizontal";
+   
 
     }
-
-
-    private void Update()
-    {
-        // Store the player's input and make sure the audio for the engine is playing.
-        m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
-        m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
-
-    }
-
 
     private void FixedUpdate()
     {
         // Move and turn the tank.
 
         Move();
-        Turn();
+       // Turn();
     }
 
 
     private void Move()
     {
         // Adjust the position of the tank based on the player's input.
-        Vector3 moviment = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
+        Vector3 moviment = transform.position  * m_Speed * Time.deltaTime;
 
-        m_Rigidbody.MovePosition(m_Rigidbody.position + moviment);
+        transform.Translate(transform.position + moviment);
+
+        //m_Rigidbody.MovePosition(m_Rigidbody.position + moviment);
 
     }
 
@@ -75,7 +66,7 @@ public class MovimentoMao : MonoBehaviour
     private void Turn()
     {
         // Adjust the rotation of the tank based on the player's input.
-        float turn = m_TurnInputValue * m_TurnSpeed * Time.deltaTime;
+        float turn =  m_TurnSpeed * Time.deltaTime;
 
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
 
